@@ -1,4 +1,4 @@
-# Client Website – Phase One
+# Client Website – Student Exit Ticket Analysis
 
 ## Overview
 This project is a **frontend-only website** designed to visualize and analyze student feedback (Exit Tickets) for a university course.
