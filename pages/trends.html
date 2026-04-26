@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BucStats | Trends</title>
+    <link rel="stylesheet" href="/CSCI1210-ClientWebsite-main/css/trends.css">
+</head>
+<body>
+    <header class="top-header">
+        <h2 class="header-logo">BUCSTATS</h2>
+    </header>
 
+    <div class="main-body">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <p class="nav-category">Main Menu</p>
+                <nav class="side-nav">
+                     <a href="upload.html" class="nav-link">
+                        <div class="nav-item">
+                            <i class="fa-solid fa-cloud-arrow-up"></i> Landing / Upload
+                        </div>
+                    </a>
+                    <a href="index.html" class="nav-link">
+                        <div class="nav-item">
+                            <i class="fa-solid fa-house"></i> Data Dashboard
+                        </div>
+                    </a>
+                    <a href="response_analysis.html" class="nav-link">
+                        <div class="nav-item">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i> Response Analysis
+                        </div>
+                    </a>
+                    <a href="trends.html" class="nav-link">
+                        <div class="nav-item active"> <i class="fa-solid fa-chart-line"></i> Trends Over Time
+                        </div>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="action-bar">
+                <div class="title-group">
+                    <h1 class="page-title">Performance Trends</h1>
+                    <p class="page-subtitle">Analyzing exit ticket responses.</p>
+                </div>
+                <div class="action-controls">
+                    <select class="filter-dropdown">
+                        <option>Last 7 Days</option>
+                        <option>Current Semester</option>
+                    </select>
+                    <button class="btn-primary">Import Data</button>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Difficulty Progression</h3>
+                    <div class="placeholder-box">Line Chart: Difficulty vs. Time</div>
+                </div>
+                <div class="content-card">
+                    <h3>Topic Engagement</h3>
+                    <div class="placeholder-box">Bar Chart: Topic Frequency</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
