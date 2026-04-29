@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name='author' content='Noah Ford, Vanay Rowell, Alyssa Carlomusto, Marco Crea, Hannah Hollick'>
+	<meta name='description' content='Project BucStats for CSCI-1210'>
+	<meta name='date' content='4/20/2026'>
+    <meta name='last revised' content='4/28/2026'>
+    
+    <title>BucStats | Databoard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../images/icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="top-header">
+        <h2 class="header-logo">BUCSTATS</h2>
+    </header>
+    <div class="main-body">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <p class="nav-category">Main Menu</p>
+                <nav class="side-nav">
+                        <a href="index.html" class="nav-link">
+                            <div class="nav-item">
+                                <i class="fa-solid fa-cloud-arrow-up"></i> Landing / Upload
+                            </div>
+                        </a>
+                        <a href="dashboard.html" class="nav-link">
+                            <div class="nav-item active">
+                                <i class="fa-solid fa-gauge"></i> Databoard
+                            </div>
+                        </a>
+                        <a href="response_analysis.html" class="nav-link">
+                            <div class="nav-item"> 
+                                <i class="fa-solid fa-chart-area"></i> Response Analysis
+                            </div>
+                        </a>
+                        <a href="trends.html" class="nav-link">
+                            <div class="nav-item">
+                                <i class="fa-solid fa-arrow-trend-up"></i>Trends Over Time
+                            </div>
+                        </a>
+                </nav>
+            </div>
+        </aside>
+        <main class="main-content">
+                
+            <div class="action-bar">
+                <div>
+                    <h1 class="page-title">Class Analytics Overview</h1>
+                    <p class="page-subtitle">High-level metrics from recent exit tickets.</p>
+                </div>
+                <button class="btn-primary"><i class="fa-solid fa-download"></i> Export</button>
+            </div>
+
+            <div class="metrics-row">
+                <div class="stat-card dark-card">
+                    <div class="icon-box icon-gold"><i class="fa-solid fa-users"></i></div>
+                    <h3 class="stat-title">Total Responses</h3>
+                    <div class="stat-value">112</div>
+                </div>
+                <div class="stat-card dark-card">
+                    <div class="icon-box icon-blue"><i class="fa-solid fa-face-dizzy"></i></div>
+                    <h3 class="stat-title">Avg. Difficulty</h3>
+                    <div class="stat-value">5.36</div>
+                </div>
+                <div class="stat-card dark-card">
+                    <div class="icon-box icon-green"><i class="fa-solid fa-brain"></i></div>
+                    <h3 class="stat-title">Concepts Mastered</h3>
+                    <div class="stat-value">24</div>
+                </div>
+                <div class="stat-card dark-card">
+                    <div class="icon-box icon-red"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <h3 class="stat-title">At-Risk Students</h3>
+                    <div class="stat-value">8</div>
+                </div>
+            </div>
+            <div class="chart-row">
+                <div class="content-card">
+                    <h3 class="card-heading">Topic Mastery vs. Difficulty</h3>
+                    
+                    <div class="chart-container" style="position: relative; height:350px; width:100%">
+                        <canvas id="masteryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-row">
+                <div class="content-card">
+                    <h3 class="card-heading">Recent Milestones</h3>
+                    <ul class="milestone-list">
+                        <li><i class="fa-solid fa-circle-check text-green"></i> <strong>For Loops</strong> mastery reached 85%</li>
+                        <li><i class="fa-solid fa-circle-check text-green"></i> <strong>Arrays</strong> difficulty dropped below 4.0</li>
+                        <li><i class="fa-solid fa-triangle-exclamation text-yellow"></i> <strong>Async</strong> flagged for review</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3 class="card-heading">Quick Actions</h3>
+                    <div class="quick-actions-grid">
+                        <button class="btn-secondary">Upload New Ticket Data</button>
+                        <button class="btn-secondary">View At-Risk Roster</button>
+                        <button class="btn-secondary">Generate Weekly Summary</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+    <script src="../charts.js"></script>
+    <script src='/js/w3c.js'></script>
+</body>
+</html>

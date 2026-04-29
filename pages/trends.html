@@ -1,69 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+	<meta name='author' content='Noah Ford, Vanay Rowell, Alyssa Carlomusto, Marco Crea, Hannah Hollick'>
+	<meta name='description' content='Project BucStats for CSCI-1210'>
+	<meta name='date' content='4/18/2026'>
+    <meta name='last revised' content='4/28/2026'>
+    
     <title>BucStats | Trends</title>
-    <link rel="stylesheet" href="..\css\trends.css">
+    <link rel="stylesheet" href="../css/trends.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../images/icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
+
 <body>
     <header class="top-header">
         <h2 class="header-logo">BUCSTATS</h2>
     </header>
-
     <div class="main-body">
         <aside class="sidebar">
             <div class="sidebar-content">
                 <p class="nav-category">Main Menu</p>
-                <nav class="side-nav">
-                     <a href="upload.html" class="nav-link">
+               <nav class="side-nav">
+                     <a href="index.html" class="nav-link">
                         <div class="nav-item">
                             <i class="fa-solid fa-cloud-arrow-up"></i> Landing / Upload
                         </div>
                     </a>
-                    <a href="index.html" class="nav-link">
+                    <a href="dashboard.html" class="nav-link">
                         <div class="nav-item">
-                            <i class="fa-solid fa-house"></i> Data Dashboard
+                            <i class="fa-solid fa-gauge"></i> Databoard
                         </div>
                     </a>
                     <a href="response_analysis.html" class="nav-link">
-                        <div class="nav-item">
-                            <i class="fa-solid fa-magnifying-glass-chart"></i> Response Analysis
+                        <div class="nav-item"> <i class="fa-solid fa-chart-area"></i> Response Analysis
                         </div>
                     </a>
                     <a href="trends.html" class="nav-link">
-                        <div class="nav-item active"> <i class="fa-solid fa-chart-line"></i> Trends Over Time
+                        <div class="nav-item active">
+                            <i class="fa-solid fa-arrow-trend-up"></i>Trends Over Time
                         </div>
                     </a>
                 </nav>
             </div>
         </aside>
-
         <main class="main-content">
             <div class="action-bar">
                 <div class="title-group">
                     <h1 class="page-title">Performance Trends</h1>
                     <p class="page-subtitle">Analyzing exit ticket responses.</p>
+                    
                 </div>
                 <div class="action-controls">
                     <select class="filter-dropdown">
                         <option>Last 7 Days</option>
+                        <option>This Month</option>
                         <option>Current Semester</option>
+                        <option>By Year</option>
                     </select>
-                    <button class="btn-primary">Import Data</button>
+                    <button class="btn-primary"><i class="fa-solid fa-download"></i> Export</button>
                 </div>
             </div>
-
             <div class="content-grid">
+    
                 <div class="content-card">
                     <h3>Difficulty Progression</h3>
-                    <div class="placeholder-box">Line Chart: Difficulty vs. Time</div>
+                    <div class="chart-container" style="position: relative; height:500px; width:100%">
+                        <canvas id="difficultyChart"></canvas>
+                    </div>
                 </div>
+
                 <div class="content-card">
                     <h3>Topic Engagement</h3>
-                    <div class="placeholder-box">Bar Chart: Topic Frequency</div>
+                    <div class="chart-container" style="position: relative; height:500px; width:100%">
+                        <canvas id="engagementChart"></canvas>
+                    </div>
                 </div>
             </div>
         </main>
     </div>
+    <script src="../charts.js"></script>
+    <script src='/js/w3c.js'></script>
 </body>
+
 </html>

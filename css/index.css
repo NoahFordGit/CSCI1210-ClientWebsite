@@ -1,0 +1,251 @@
+/*
+	Author:			Noah Ford, Vanay Rowell, Alyssa Carlomusto, Marco Crea, Hannah Hollick
+	Date:			4/19/2026		
+    Last Revised:   4/28/2026
+	Description:	Project BucStats for CSCI-1210
+*/
+
+:root {
+    --primary: #020b1a;
+    --accent: #ffc72c;
+    --bg-light: #f8fafc;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --success: #10b981;
+    --danger: #ef4444;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-light);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-header {
+    height: 70px;
+    background-color: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 2px solid var(--accent);
+}
+
+.main-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.main-content {
+    flex: 1;
+    padding: 60px;
+    overflow-y: auto;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #041229;
+    color: #94a3b8;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-category {
+    padding: 20px 30px 10px 30px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #475569;
+    font-weight: 700;
+}
+
+.nav-item {
+    padding: 14px 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-item i {
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.nav-item.active {
+    color: var(--accent);
+    background: rgba(255, 199, 44, 0.08);
+    font-weight: 600;
+}
+
+.nav-item.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--accent);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.upload-container {
+    max-width: 800px;
+    background: linear-gradient(145deg, #041229 0%, #020b1a 100%);
+    border-radius: 16px;
+    padding: 35px 35px 60px 35px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 3px solid var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.page-subtitle {
+    margin: 5px 0 30px 0;
+    color: var(--text-muted);
+}
+
+.drop-zone {
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.02);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 35px;
+}
+
+.drop-zone:hover {
+    border-color: var(--accent);
+    background: rgba(255, 199, 44, 0.05);
+}
+
+.drop-icon {
+    font-size: 3.5rem;
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.drop-zone:hover .drop-icon {
+    color: var(--accent);
+}
+
+.drop-zone h3 {
+    margin: 0;
+    color: var(--white);
+}
+
+.drop-zone p {
+    color: #94a3b8;
+}
+
+.file-limits {
+    font-size: 0.8rem;
+    color: #475569;
+}
+
+.file-list-container h4 {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.file-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.file-type-icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.file-name {
+    font-weight: 600;
+    color: var(--white);
+    display: block;
+}
+
+.file-size {
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+.file-actions {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #475569;
+    cursor: pointer;
+}
+
+.file-actions:hover {
+    color: var(--danger);
+}
+
+.progress-bar-container {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar.full {
+    width: 100%;
+    height: 100%;
+    background-color: var(--success);
+}
+
+.file-item.error-state {
+    border-color: rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.05);
+}
+
+.error-state .error-icon {
+    color: var(--danger);
+}
+
+.error-state .error-text {
+    color: #f87171;
+    font-weight: 500;
+}
+
+.progress-bar.error {
+    width: 100%;
+    height: 100%;
+    background-color: var(--danger);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--primary);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+}

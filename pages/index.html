@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name='author' content='Noah Ford, Vanay Rowell, Alyssa Carlomusto, Marco Crea, Hannah Hollick'>
+	<meta name='description' content='Project BucStats for CSCI-1210'>
+	<meta name='date' content='4/19/2026'>
+    <meta name='last revised' content='4/27/2026'>
+    
+    <title>BucStats | Upload Data</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../images/icon.png">
+</head>
+
+<body>
+    <header class="top-header">
+        <h2 class="header-logo">BUCSTATS</h2>
+    </header>
+    <div class="main-body">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <p class="nav-category">Main Menu</p>
+                <nav class="side-nav">
+                        <a href="index.html" class="nav-link">
+                            <div class="nav-item active">
+                                <i class="fa-solid fa-cloud-arrow-up"></i> Landing / Upload
+                            </div>
+                        </a>
+                        <a href="dashboard.html" class="nav-link">
+                            <div class="nav-item">
+                                <i class="fa-solid fa-gauge"></i> Databoard
+                            </div>
+                        </a>
+                        <a href="response_analysis.html" class="nav-link">
+                            <div class="nav-item"> 
+                                <i class="fa-solid fa-chart-area"></i> Response Analysis
+                            </div>
+                        </a>
+                        <a href="trends.html" class="nav-link">
+                            <div class="nav-item">
+                                <i class="fa-solid fa-arrow-trend-up"></i>Trends Over Time
+                            </div>
+                        </a>
+                </nav>
+            </div>
+        </aside>
+        <main class="main-content">
+            <div class="action-bar">
+                <div class="title-group">
+                    <h1 class="page-title">Upload Exit Tickets</h1>
+                    <p class="page-subtitle">Drag and drop your .csv or .xlsx files below to begin processing.</p>
+                </div>
+            </div>
+            <div class="upload-container">
+                <div class="drop-zone" id="drop-zone">
+                    <i class="fa-solid fa-cloud-arrow-up drop-icon"></i>
+                    <h3>Drag & Drop files here</h3>
+                    <p>or click to browse your computer</p>
+                    <span class="file-limits">Supports .CSV, .XLSX</span>
+                </div>
+                <div class="file-list-container">
+                <h4>Ready to Process</h4>
+                <div class="file-list">
+                    <div class="file-item">
+                        <div class="file-info">
+                            <i class="fa-solid fa-file-excel file-type-icon"></i>
+                            <div class="file-details">
+                                <span class="file-name">Example Analysis.xlsx</span>
+                                <span class="file-size">45 KB</span>
+                            </div>
+                        </div>
+                        <div class="file-actions">
+                            <i class="fa-solid fa-xmark remove-file"></i>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar full"></div>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-info">
+                            <i class="fa-solid fa-file-csv file-type-icon"></i>
+                            <div class="file-details">
+                                <span class="file-name">Example Raw Data.csv</span>
+                                <span class="file-size">12 KB</span>
+                            </div>
+                        </div>
+                        <div class="file-actions">
+                            <i class="fa-solid fa-xmark remove-file"></i>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar full"></div>
+                        </div>
+                    </div>
+                    <div class="file-item error-state">
+                        <div class="file-info">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                            <div class="file-details">
+                                <span class="file-name">Syllabus_Update.pdf</span>
+                                <span class="file-size error-text">Upload failed: Unsupported file format (.pdf)</span>
+                            </div>
+                        </div>
+                        <div class="file-actions">
+                            <i class="fa-solid fa-trash-can remove-file"></i>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar error"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="upload-actions">
+                    <button class="btn-primary">Process Uploaded Data</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src='/js/w3c.js'></script>
+</body>
+
+</html>
